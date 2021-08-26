@@ -1,4 +1,4 @@
-import { authService } from "fbBase";
+import { authService, firebaseInstance } from "fbBase";
 import React, { useState } from "react";
 
 const Auth = () => {
@@ -38,6 +38,21 @@ const Auth = () => {
 
   const toggleAccount = () => setNewAccount((prev) => !prev);
 
+  // onSocialClick 함수 : 소셜 로그인 처리 시키는 함수 (async 비동기 함수)
+  const onSocialClick = async (event) => {
+    const {
+      target: { name },
+    } = event;
+    let provider;
+    if (name === "google") {
+      provider = new firebaseInstance.auth.GoogleAuthProvider();
+    } else if (name === "github") {
+      provider = new firebaseInstance.auth.GithubAuthProvider();
+    }
+    const data = await authService.signInWithPopup(provider);
+    console.log(data);
+  };
+
   return (
     <div>
       Please Log in..!
@@ -65,8 +80,12 @@ const Auth = () => {
         {newAccount ? "Sign In" : "Create Account"}
       </span>
       <div>
-        <button>Continue with Google</button>
-        <button>Continue with Github</button>
+        <button name="github" onClick={onSocialClick}>
+          Continue with Github
+        </button>
+        <button name="google" onClick={onSocialClick}>
+          Continue with Google
+        </button>
       </div>
     </div>
   );
