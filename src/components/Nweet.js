@@ -1,4 +1,4 @@
-import { dbService } from "fbBase";
+import { dbService, storageService } from "fbBase";
 import React, { useState } from "react";
 
 const Nweet = ({ nweetObj, isOwner }) => {
@@ -11,6 +11,8 @@ const Nweet = ({ nweetObj, isOwner }) => {
     if (ok) {
       //delete
       await dbService.doc(`nweets/${nweetObj.id}`).delete();
+      //reference에서 URL을 얻는 방법
+      await storageService.refFromURL(nweetObj.attachmentUrl).delete();
     }
   };
 
@@ -51,6 +53,15 @@ const Nweet = ({ nweetObj, isOwner }) => {
       ) : (
         <>
           <h4>{nweetObj.text}</h4>
+          {/* nweetObj안에 attachmentUrl 이 있다. */}
+          {nweetObj.attachmentUrl && (
+            <img
+              src={nweetObj.attachmentUrl}
+              width="50px"
+              height="50px"
+              alt={nweetObj.value}
+            />
+          )}
           {isOwner && (
             <>
               <button onClick={onDeleteClick}>delete Nweet</button>
