@@ -11,4 +11,6 @@
 
 </ul>
 
-<img width="400" alt="스크린샷 2021-09-02 오후 5 19 05" src="https://user-images.githubusercontent.com/74946505/131808633-c5b33c0a-8db9-419d-a301-10468b706744.png">
+<img width="318" alt="스크린샷 2021-09-02 오후 6 30 42" src="https://user-images.githubusercontent.com/74946505/131820100-422e5178-a30b-4dc0-9482-b4a87dcd40fe.png">
+<img width="334" alt="스크린샷 2021-09-02 오후 6 16 25" src="https://user-images.githubusercontent.com/74946505/131820115-80c0a908-976f-4858-81ad-c2b50d7eb935.png">
+
