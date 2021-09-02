@@ -1,12 +1,9 @@
 import { authService, firebaseInstance } from "fbBase";
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faTwitter,
-  faGoogle,
-  faGithub,
-} from "@fortawesome/free-brands-svg-icons";
+import { faGoogle, faGithub } from "@fortawesome/free-brands-svg-icons";
 import AuthForm from "components/AuthForm";
+import { faArchive } from "@fortawesome/free-solid-svg-icons";
 
 const Auth = () => {
   // onSocialClick 함수 : 소셜 로그인 처리 시키는 함수 (async 비동기 함수)
@@ -27,11 +24,11 @@ const Auth = () => {
   return (
     <div className="authContainer">
       <FontAwesomeIcon
-        icon={faTwitter}
-        color={"#04AAFF"}
+        icon={faArchive}
+        color={"white"}
         size="3x"
         style={{ marginBottom: 30 }}
-      />
+      ></FontAwesomeIcon>{" "}
       <AuthForm />
       <div className="authBtns">
         <button onClick={onSocialClick} name="google" className="authBtn">
