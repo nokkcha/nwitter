@@ -8,6 +8,7 @@
 <li>React</li>
 <li>React Hook</li>
 <li>HTML,CSS</li>
+  <li>Firebase, Firestore</li>
 
 </ul>
 
