@@ -57,17 +57,18 @@ form {
 .formBtn {
   cursor: pointer;
   width: 100%;
+  height: 30px;
   padding: 7px 20px;
   text-align: center;
   color: white;
   border-radius: 20px;
-  background-color: #04aaff;
+  background-color: #f7d35c;
   cursor: pointer;
 }
 
 .cancelBtn {
   cursor: pointer;
-  background-color: tomato;
+  background-color: #cfab32;
 }
 
 /* Profile Page */
@@ -107,8 +108,8 @@ form {
   flex-grow: 1;
   height: 40px;
   padding: 0px 20px;
-  color: white;
-  border: 1px solid #04aaff;
+  color: rgb(19, 19, 19);
+  border: 1px solid #cfab32;
   border-radius: 20px;
   font-weight: 500;
   font-size: 12px;
@@ -118,7 +119,7 @@ form {
 .factoryInput__arrow {
   position: absolute;
   right: 0;
-  background-color: #04aaff;
+  background-color: #cfab32;
   height: 40px;
   width: 40px;
   padding: 10px 0px;
@@ -128,7 +129,7 @@ form {
 }
 
 .factoryInput__label {
-  color: #04aaff;
+  color: white;
   cursor: pointer;
 }
 
@@ -238,6 +239,10 @@ form {
   cursor: pointer;
 }
 
+.authBtn:hover {
+  background: whitesmoke;
+}
+
 /* AuthForm */
 
 .authInput {
@@ -253,10 +258,14 @@ form {
 
 .authSubmit {
   text-align: center;
-  background: #04aaff;
+  background: #f7d35c;
   color: white;
   margin-top: 10;
   cursor: pointer;
+}
+
+.authSubmit:hover {
+  background: #d1af3f;
 }
 
 .authError {
@@ -267,11 +276,14 @@ form {
 }
 
 .authSwitch {
-  color: #04aaff;
+  color: white;
   cursor: pointer;
   margin-top: 10px;
   margin-bottom: 50px;
   display: block;
   font-size: 12px;
+}
+
+.authSwitch:hover {
   text-decoration: underline;
 }
